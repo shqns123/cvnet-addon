@@ -1,0 +1,8 @@
+{
+  "build_from": {
+    "amd64": "python:3.10-slim"
+  },
+  "args": {
+    "BUILD_ARCH": "amd64"
+  }
+}

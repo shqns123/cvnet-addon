@@ -1,0 +1,21 @@
+name: "CVNet RS485 Controller"
+version: "1.0.0"
+slug: "cvnet"
+description: "EW11을 통해 수신한 월패드 패킷을 MQTT로 전달"
+arch:
+  - amd64
+startup: services
+boot: auto
+ports:
+  5001/tcp: 5001
+host_network: true
+options:
+  MQTT_HOST: "localhost"
+  MQTT_PORT: 1883
+  MQTT_USERNAME: "homeassistant"
+  MQTT_PASSWORD: "1234"
+schema:
+  MQTT_HOST: str
+  MQTT_PORT: int
+  MQTT_USERNAME: str
+  MQTT_PASSWORD: str
